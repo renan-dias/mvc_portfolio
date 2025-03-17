@@ -1,0 +1,30 @@
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate__fadeInDown {
+    animation: fadeInSlide 1s ease-out;
+}
+
+.card-hover:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s;
+}
+
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
