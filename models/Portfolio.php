@@ -11,7 +11,8 @@ class Portfolio {
     public function listarTodos() {
         $sql = "SELECT * FROM projetos";
         $result = $this->conn->query($sql);
-        return $result->fetch_all(MYSQLI_ASSOC);
+        // Retorna array vazio se não houver resultados
+        return $result ? $result->fetch_all(MYSQLI_ASSOC) : [];
     }
 
     public function criar($titulo, $descricao, $imagem) {

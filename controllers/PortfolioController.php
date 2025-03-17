@@ -9,7 +9,8 @@ class PortfolioController {
     }
 
     public function index() {
-        $projetos = $this->model->listarTodos();
+        // Garante que $projetos seja um array, mesmo se não houver dados
+        $projetos = $this->model->listarTodos() ?? [];
         require_once 'views/portfolio/index.php';
     }
 

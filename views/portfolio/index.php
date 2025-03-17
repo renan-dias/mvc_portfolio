@@ -15,13 +15,17 @@
         </nav>
     </header>
     <section class="projetos">
-        <?php foreach ($projetos as $projeto): ?>
-            <div class="projeto-card">
-                <img src="/assets/uploads/<?= $projeto['imagem'] ?>" alt="<?= $projeto['titulo'] ?>">
-                <h2><?= $projeto['titulo'] ?></h2>
-                <p><?= $projeto['descricao'] ?></p>
-            </div>
-        <?php endforeach; ?>
+        <?php if (!empty($projetos)): ?>
+            <?php foreach ($projetos as $projeto): ?>
+                <div class="projeto-card">
+                    <img src="/assets/uploads/<?= $projeto['imagem'] ?>" alt="<?= $projeto['titulo'] ?>">
+                    <h2><?= $projeto['titulo'] ?></h2>
+                    <p><?= $projeto['descricao'] ?></p>
+                </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p>Nenhum projeto encontrado.</p>
+        <?php endif; ?>
     </section>
     <script src="/assets/js/script.js"></script>
 </body>
